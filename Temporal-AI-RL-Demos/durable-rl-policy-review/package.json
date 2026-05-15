@@ -1,0 +1,20 @@
+{
+  "name": "durable-rl-policy-review",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "worker": "tsx src/worker.ts",
+    "start": "tsx src/client.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@temporalio/activity": "latest",
+    "@temporalio/client": "latest",
+    "@temporalio/worker": "latest",
+    "@temporalio/workflow": "latest",
+    "tsx": "latest",
+    "typescript": "latest"
+  },
+  "devDependencies": {}
+}
