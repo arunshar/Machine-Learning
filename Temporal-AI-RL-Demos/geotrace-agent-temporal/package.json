@@ -1,5 +1,5 @@
 {
-  "name": "durable-rl-policy-review",
+  "name": "geotrace-agent-temporal",
   "version": "0.1.0",
   "private": true,
   "type": "module",

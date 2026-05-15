@@ -10,18 +10,18 @@ async function main() {
     minReward: 80,
     maxSafetyViolations: 1,
     policy: {
-      id: 'ppo-gridworld-v3',
+      id: 'geotrace-answer-policy-v3',
       algorithm: 'ppo',
       rewardMean: 87.4,
       rewardStd: 6.2,
       safetyViolations: 1,
-      checkpointUri: 's3://example-research-checkpoints/ppo-gridworld-v3.pt',
+      checkpointUri: 's3://example-research-checkpoints/geotrace-answer-policy-v3.pt',
     },
   };
 
   const handle = await client.workflow.start(reviewPolicyWorkflow, {
-    taskQueue: 'durable-rl-policy-review',
-    workflowId: `policy-review-${input.policy.id}`,
+    taskQueue: 'geotrace-agent-temporal',
+    workflowId: `geotrace-review-${input.policy.id}`,
     args: [input],
   });
 

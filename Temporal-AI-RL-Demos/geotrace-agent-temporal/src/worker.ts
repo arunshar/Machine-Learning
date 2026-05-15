@@ -5,7 +5,7 @@ async function main() {
   const worker = await Worker.create({
     workflowsPath: new URL('./workflows.ts', import.meta.url).pathname,
     activities,
-    taskQueue: 'durable-rl-policy-review',
+    taskQueue: 'geotrace-agent-temporal',
   });
 
   await worker.run();

@@ -12,7 +12,7 @@ from temporalio.client import Client
 from temporalio.common import RetryPolicy
 from temporalio.worker import Worker
 
-TASK_QUEUE = "durable-rl-gridworld"
+TASK_QUEUE = "pi-grpo-temporal"
 
 State = Tuple[int, int]
 Action = str
@@ -24,7 +24,7 @@ TRAP: State = (1, 2)
 
 @dataclass
 class ExperimentConfig:
-    workflow_id: str = "rl-gridworld-demo"
+    workflow_id: str = "pi-grpo-temporal-demo"
     batches: int = 8
     episodes_per_batch: int = 50
     max_steps: int = 30
